@@ -17,3 +17,12 @@ const swiper2 = new Swiper('.swiper-offers', {
   //   prevEl: '.swiper-button-prev',
   // },
 });
+
+const swiper3 = new Swiper('.swiper-news', {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
