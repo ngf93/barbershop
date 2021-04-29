@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS only -->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+	
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
@@ -30,7 +33,7 @@
                     </ul>
                 </nav>
                 <a class="d-none" href="tel:+79991232323">7 (999) 123-23-23</a>
-                <button class="btn-burger"><img src="img/icons/burger.svg" class="w-100"></button>
+                <button class="btn-burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></button>
             </header>
             <div class="swiper-main">
                 <div class="swiper-wrapper">
@@ -421,8 +424,8 @@
 
     <section id="sec-8" class="container mb-0">
         <h2 title="Контакты">Контакты</h2>
-        <div class="row gx-0 justify-content-center">
-            <div class="col-8 mb-4">
+        <div class="row gx-0 gx-md-4 justify-content-center flex-md-row-reverse">
+            <div class="col-8 col-md-4 mb-4">
                 <div class="d-flex mb-3">
                     <img src="img/icons/pin.svg" alt="Адрес" class="icon">
                     <div class="ms-3 pt-1">Петербургская, 11</div>
@@ -434,7 +437,7 @@
                 <div class="d-flex mb-3">
                     <img src="img/icons/phone.svg" alt="Номер телефона" class="icon">
                     <div class="ms-3 pt-1">
-                        <div><a href="tel:79991232323">7 (999) 123-23-23</a></div>
+                        <div class="mb-2"><a href="tel:79991232323">7 (999) 123-23-23</a></div>
                         <div><a href="tel:79999876543">7 (999) 987-65-43</a></div>
                     </div>
                 </div>
@@ -447,32 +450,64 @@
                     <div class="ms-3 pt-1"><a href="http://barberhop.ru/">barberhop.ru</a></div>
                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-md-8">
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8c0aaafef97a7bffb9ee9d4725345e3a80aedf6001e37ce1431b57fabe6d8395&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-8">
-                    <img src="img/logo-light.png" class="img-fluid mx-auto">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="order-1 order-md-2 col-8 col-md-4">
+                    <img src="img/logo-light.png" class="img-fluid d-block mx-auto mb-4">
                 </div>
-                <div class="col-8">
-                    <div class="fw_7 white mb-3">Остались вопросы?</div>
-                    <div class="d-flex mb-3">
+                <div class="order-2 order-md-1 col-8 col-md-4 mb-4">
+                    <div class="fw_7 white mb-2">Остались вопросы?</div>
+                    <div class="d-flex mb-2">
                         <img src="img/icons/email.svg" alt="Электронная почта" class="icon">
                         <div class="ms-3 pt-1 white"><a href="mailto:barberhop@mail.ru">barberhop@mail.ru</a></div>
                     </div>
+                    <div class="color-2 play f_13 fw_7"><a href="tel:+79991232323">7 (999) 123-23-23</a></div>
+                </div>
+                <div class="order-3 col-8 col-md-4">
+                    <div class="fw_7 white mb-2">Мы в соцсетях</div>
+                    <div class="d-flex">
+                        <a href="#"><img src="img/icons/instagram.svg" alt=""></a>
+                        <a href="#" class="ms-3"><img src="img/icons/facebook.svg" alt=""></a>
+                        <a href="#" class="ms-3"><img src="img/icons/vk.svg" alt=""></a>
+                    </div>
                 </div>
             </div>
+            <div class="text-center white f_09 mt-5">© “ООО Барбершоп”. Все права защищены</div>
         </div>
     </footer>
     
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" data-bs-keyboard="false" data-bs-backdrop="true" aria-labelledby="offcanvasExampleLabel">
+        <div class="p-5">
+            <nav class="mb-4">
+                <ul class="flex-column">
+                    <li class="mb-4"><a href="#">О нас</a></li>
+                    <li class="mb-4"><a href="#">Новости</a></li>
+                    <li class="mb-4"><a href="#">Услуги и цены</a></li>
+                    <li class="mb-4"><a href="#">Акции</a></li>
+                    <li class="mb-4"><a href="#">Контакты</a></li>
+                    <li class="mb-4"><a href="#">Мастера</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="fw_7 mb-5">Онлайн-запись</button>
+            <div class="mb-4"><a href="tel:+79991232323">7 (999) 123-23-23</a></div>
+            <div><a href="mailto:barbershop@mail.ru">barbershop@mail.ru</a></div>
+        </div>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+	
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/sliders.js"></script>
 </body>
 </html>
