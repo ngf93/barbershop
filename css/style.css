@@ -231,6 +231,17 @@ blockquote {
     opacity: .85;
     margin-bottom: 1em;
 }
+@media (min-width: 576px){
+    .box img {
+        height: 320px;
+    }
+}
+@media (min-width: 768px){
+    .box img {
+        height: 260px;
+    }
+}
+
 
 .swiper-news {
     overflow: hidden;

@@ -12,10 +12,7 @@ const swiper2 = new Swiper('.swiper-offers', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
+ 
 });
 
 const swiper3 = new Swiper('.swiper-news', {
@@ -25,4 +22,21 @@ const swiper3 = new Swiper('.swiper-news', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    // when window width is >= 320px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
 });
